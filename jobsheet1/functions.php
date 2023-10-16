@@ -12,8 +12,6 @@
     function lingkaran($r){
         return 3.14*$r*$r;
     }
-    echo "</br> Luas Persegi Panjang= " . persegi_panjang(5,2) . "</br>";
-    echo "</br> Luas Lingkaran= " . lingkaran(7) . "</br>";
   
  ?>
 
