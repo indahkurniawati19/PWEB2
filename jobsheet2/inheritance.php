@@ -1,10 +1,11 @@
 <?php 
 
-class manusia {
-    public $nama_saya;
+class 
+manusia {
+    private $nama_saya;
 
-function Panggil_nama($saya){
-   $this->nama_saya=$saya;  
+public function Panggil_nama($saya){
+   return $this->nama_saya=$saya;  
 }
 
 }
@@ -12,10 +13,14 @@ function Panggil_nama($saya){
 //membuaat class turunan atau yang disebut dengan sub class dari class manusia
 class mahasiswa extends manusia{
 
-    public $nama_mahasiswa;
+    protected $nama_mahasiswa;
+
+    protected function nama_mahasiswa(){
+        return "Nama saya " .$this->nama;
+    }
 
     function panggil_mahasiswa($mahasiswa){
-        $this->nama_mahasiswa=$mahasiswa;
+      return  $this->nama_mahasiswa=$mahasiswa;
     }
 
 }
@@ -27,6 +32,6 @@ $informatika->panggil_nama("Indah");
 $informatika->panggil_mahasiswa("Kurniawati Salongan");
 
 //tampilkan isi dari properti
-echo "Nama Depan Saya : " . $informatika->nama_saya."</br>";
-echo "Nama Belakan Saya : " . $informatika->nama_mahasiswa."</br>";
+echo "Nama Depan Saya : " . $informatika->panggil_nama("Indah")."</br>";
+echo "Nama Belakan Saya : " . $informatika->panggil_mahasiswa("Kurniawati Salongan") ."</br>";
 ?>
