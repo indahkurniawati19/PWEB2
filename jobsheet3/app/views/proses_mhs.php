@@ -12,4 +12,8 @@ if ($aksi=="tambah"){
     $db->update($_POST['id'], $_POST['nim'], $_POST['nama'], $_POST['alamat']);
     header("location:tampil_mhs.php");
 }
+elseif($aksi=="hapus"){
+    $db->hapus($_GET['id']); 
+    header("location:tampil_mhs.php");
+}
 ?>

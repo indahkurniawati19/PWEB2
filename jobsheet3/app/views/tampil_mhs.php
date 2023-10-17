@@ -37,11 +37,11 @@ foreach($db->tampil_mahasiswa() as $x){
         <td><?php echo $x['alamat'] ?></td>
         <td>
             <a href="edit_mhs.php?id=<?php echo $x['id'];?>&aksi=edit"class="btn btn-warning">Edit</a>
-            <a href="hapus_mhs.php"class="btn btn-danger">Hapus</a>
+            <a href="proses_mhs.php?id=<?php echo $x['id'];?>&aksi=hapus"class="btn btn-danger">Hapus</a>
         </td>
     </tr>
     <?php
-}
+}  
 ?>
 </table>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>

@@ -20,6 +20,8 @@ class database {
         return $hasil;
     }
 
+   
+
     function tambah_mhs($nim,$nama,$alamat){
         mysqli_query($this->koneksi,"insert into mahasiswa (nim,nama,alamat) values('$nim','$nama','$alamat')");
     }
@@ -35,6 +37,9 @@ class database {
     function update($id,$nim,$nama,$alamat){
         mysqli_query($this->koneksi,"update mahasiswa set nim='$nim', nama='$nama', alamat='$alamat' where id='$id'");
     }
+    function hapus($id){
+        mysqli_query($this->koneksi, "delete from mahasiswa where id='$id'");
+    }
 }
  
-?>
+?>    
