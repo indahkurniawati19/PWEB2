@@ -19,13 +19,10 @@ class database{
         }
         return $hasil;
     }
-
-    function tambah_dosen($nidn, $nama, $alamat)
-    {
-        mysqli_query($this->koneksi, "insert into dosen (nip,nama,alamat) values('$nidn', '$nama', '$alamat')");
+    function tambah_dosen($nidn,$nama,$alamat){
+        mysqli_query($this->koneksi, "insert into dosen (nidn,nama,alamat) values('$nidn', '$nama', '$alamat')");
     }
-
-    function edit($id)
+    function edit_dosen($id)
     {
         $data= mysqli_query($this->koneksi,"select * from dosen where id='$id'");
         while ($d= mysqli_fetch_array($data)){
@@ -34,16 +31,12 @@ class database{
         return $hasil;
     }
 
-    function update($id, $nidn, $nama, $alamat){
-        mysqli_query($this->koneksi, "update dosen set nip='$nidn', nama='$nama', alamat='$alamat' where id='$id'");
-}
-
-    function hapus($id){
-        mysqli_query($this->koneksi, "delete from dosen where id='$id'");
+    function update_dosen($id, $nidn, $nama, $alamat){
+        mysqli_query($this->koneksi, "update dosen set nidn='$nidn', nama='$nama', alamat='$alamat' where id='$id'");
     }
 
-
-
+    function hapus_dosen($id){
+        mysqli_query($this->koneksi, "delete from dosen where id='$id'");
+    }
 }
-
 ?>

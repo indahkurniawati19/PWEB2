@@ -32,7 +32,7 @@ $db=new database;
         </tr>
         <tr>
             <td>Alamat</td>
-            <td><textarea name="alamat"  cols="30" rows="5"><?php echo $d['alamat']?>"</textarea></td>
+            <td><textarea name="alamat"  cols="30" rows="5"><?php echo $d['alamat']?></textarea></td>
         </tr>
         <tr>
             <td></td >

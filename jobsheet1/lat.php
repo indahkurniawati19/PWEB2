@@ -6,7 +6,7 @@
 </head>
 <body>
     <form method="post">
-        <label for="x">Masukkan Nilai dari X:</label>
+        <label for="x">Masukkan Nilai dqari X:</label>
         <input type="text" name="x">
         <input type="submit" value="kirim">
     </form>
@@ -15,12 +15,12 @@
     if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $x = $_POST["x"];}
     echo "Nilai X = $x </br></br>";
-    if ($x>0){
-        echo " $x Adalah Bilangan Positif";
-    } else if ($x<0){
-        echo " $x Adalah Bilangan Negatif";
-    } else {
-        echo "$x Adalah Bilangan Nol";
+    if ($x<=80){
+        echo " $x Adalah Nilai B";
+    } else if ($x>=80){
+        echo " $x Adalah Nilai A";
+    }else {
+        "nilai kurang";
     }
     ?>
 </body>

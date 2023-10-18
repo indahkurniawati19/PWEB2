@@ -31,7 +31,7 @@ $db=new database;
             ?>
         <tr>
             <td><?php echo $no++ ?></td>
-            <td><?php echo $x['nip'] ?></td>
+            <td><?php echo $x['nidn'] ?></td>
             <td><?php echo $x['nama'] ?></td>
             <td><?php echo $x['alamat'] ?></td>
             <td>

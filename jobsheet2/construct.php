@@ -5,6 +5,7 @@ class mahasiswa {
 var $nim;
 var $nama;
 var $alamat;    
+var $kelas;
 
 function __construct()
 {
@@ -28,6 +29,9 @@ function tampil_mahasiswa(){
     return "Tidak akan menjadi joki atau menggunakan jasa joki sampai lulus kuliah <br>";
 }
 
+function tampil_kelas(){
+    return "TI-2D";
+}
 //method untuk menampilkan nama
 function tampil_alamat(){
 
@@ -36,10 +40,12 @@ function tampil_alamat(){
 
 //membuat objek nama_mahasiswa
 $nama_mahasiswa=new mahasiswa();
-
+$nama_kelas=new mahasiswa();
 
 //menampilkan objek ke layar
 echo  $nama_mahasiswa->tampil_nama()."</br>";
 echo  $nama_mahasiswa->tampil_mahasiswa()."</br>";
+echo  $nama_kelas->tampil_kelas()."</br>";
+
 
 ?>
