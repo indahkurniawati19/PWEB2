@@ -1,6 +1,6 @@
 <?php 
 //memanggil class database
-include '../classes/database.php';
+include '../classes/database_dosen.php';
 //instansiasi class databases
 $db=new database;
 ?>
@@ -10,11 +10,11 @@ $db=new database;
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Dosen</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" >   
+    <h3>Edit Data Dosen</h3>
   </head>
   <body>
 
-<h3>Edit Data Dosen</h3>
 <form action="proses_dosen.php?aksi=update" method="post">
     <?php 
     foreach($db->edit_dosen($_GET['id']) as $d){

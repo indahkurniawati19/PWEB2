@@ -17,23 +17,25 @@
     }
     
     echo "</br>Perulangan DO WHILE bilangan Prima kurang dari 20 </br>";
-    $k = 2;
-do { 
-    $bilprim = true;
+ 
+    $i = 2;
 
-    for ($i = 2; $i < $k; $i++) {
-        if ($k % $i === 0) {
-            $bilprim = false;
-            break;
+    do {
+        $isPrime = true;
+    
+        for ($j = 2; $j < $i; $j++) {
+            if ($i % $j == 0) {
+                $isPrime = false;
+                break;
+            }
         }
-    }
-
-    if ($bilprim) {
-        echo $k . "</br> ";
-    }
-
-    $k++;
-} while ($k < 20);
+    
+        if ($isPrime) {
+            echo $i . " </br> ";
+        }
+    
+        $i++;
+    } while ($i < 20);
     ?>
 </body>
 </html>

@@ -26,10 +26,10 @@ $db=new database;
           <a class="nav-link active" aria-current="page" href="#">Home</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Mahasiswa</a>
+          <a class="nav-link" href="tampil_mhs.php">Mahasiswa</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">Dosen</a>
+          <a class="nav-link" href="tampil_dosen.php">Dosen</a>
         </li>
         
       </ul>
@@ -44,8 +44,27 @@ $db=new database;
   <body>
   
 <div class="px-5 py-8">
+  <?php 
+
+  if($_GET['succes']==="tambah"){
+    echo '<div class="alert alert-success alert-dismissible fade show" role="alert">
+    <strong>Data Mahasiswa Berhasil Di Tambahkan!
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>';
+  }elseif($_GET['succes']==="update"){
+    echo '<div class="alert alert-primary alert-dismissible fade show" role="alert">
+    <strong>Data Mahasiswa Berhasil Di Edit!
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>';
+  }elseif($_GET['succes']==="hapus"){
+    echo '<div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <strong>Data Mahasiswa Berhasil Di hapus!
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+  </div>';
+  }
+  ?>
 <h3>Data Mahasiswa</h3>
-<a href="input_mhs.php"class="btn btn-primary">Tambah Mahasiswa</a>
+<a href="input_mhs.php"class="btn btn-primary mb-3 mt-2">Tambah Mahasiswa</a>
 <table class="table table-striped">
 <tr>
     <th>No</th>
