@@ -10,9 +10,10 @@ $db=new database;
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>mahasiswa</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <h3>Edit Data Mahasiswa</h3>
+    <h3 class="py-3">Edit Data Mahasiswa</h3>
   </head>
 
+  <div class="px-4 py-8">
   <body>
 <form action="proses_mhs.php?aksi=update" method="post">
 <?php 
