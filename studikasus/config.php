@@ -3,7 +3,7 @@
     var $host= 'localhost';
     var $username= 'root';
     var $password = "";
-    var $db ="laundry1 ";
+    var $db ="laundry1";
     var $koneksi;
 
 function getKoneksi (){

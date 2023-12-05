@@ -1,0 +1,22 @@
+RewriteEngine On
+RewriteBase /PWEB2/studikasus/
+
+RewriteCond %(REQUEST_FILENAME) !-f
+RewriteCond %(REQUEST_FILENAME) !-d
+RewriteRule ^home/?$ index.php?page=$1 [L]
+
+RewriteCond %(REQUEST_FILENAME) !-f
+RewriteCond %(REQUEST_FILENAME) !-d
+RewriteRule ^regristasi/?$ views/regristasi/index.php?page=$1 [L]
+RewriteRule ^tambahRegristasi/?$ views/regristasi/tambah.php
+RewriteRule ^proses_tambahRegristasi/?$ views/regristasi/proses_tambah.php
+RewriteRule ^editRegristasi/?$ views/regristasi//edit.php
+RewriteRule ^hapusRegristasi/?$ views/regristasi//hapus.php
+
+RewriteCond %(REQUEST_FILENAME) !-f
+RewriteCond %(REQUEST_FILENAME) !-d
+RewriteRule ^kategori/?$ views/kategori/index.php
+RewriteRule ^tambahKategori/?$ views/kategori/tambah.php
+RewriteRule ^proses_tambahKategori/?$ views/kategori/proses_tambah.php
+RewriteRule ^editKategori/?$ views/kategori/edit.php
+RewriteRule ^hapusKategori/?$ views/kategori/hapus.php

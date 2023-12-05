@@ -20,7 +20,6 @@ class database {
         return $hasil;
     }
 
-   
 
     function tambah_mhs($nim,$nama,$alamat){
         mysqli_query($this->koneksi,"insert into mahasiswa (nim,nama,alamat) values('$nim','$nama','$alamat')");
