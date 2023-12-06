@@ -26,7 +26,7 @@ class Kategori {
     }
 
     public function getKategoriById($id_kategori){
-        $query="SELECT * FROM kategori where id_kategori=$id_kategori";
+        $query="SELECT nama_barang,harga_barang FROM kategori where id_kategori=$id_kategori";
         $result=mysqli_query($this->koneksi,$query);
         return mysqli_fetch_assoc($result);
     }

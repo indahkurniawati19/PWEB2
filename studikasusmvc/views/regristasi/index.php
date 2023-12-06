@@ -21,7 +21,6 @@ $regristasi= $regristasiController->getAllRegristasi();
   <div class="container">
     <div class="row">
       <div class="col-md-12">
-<div class="px-5 py-8">
   <?php 
 error_reporting(E_ERROR | E_PARSE);
 

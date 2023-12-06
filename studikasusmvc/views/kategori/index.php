@@ -14,8 +14,7 @@ $kategori = $kategoriController->getAllKategori();
 ?>
 
 <section id="kategori" class="hero d-flex align-items-center section-bg">
-  <div class="container">
-    <div class="row">
+  <div class="container mb-0 mt-0" >
       <div class="col-md-12">
         <?php 
         error_reporting(E_ERROR | E_PARSE);
@@ -64,7 +63,6 @@ $kategori = $kategoriController->getAllKategori();
           ?>
         </table>
       </div>
-    </div>
   </div>
 </section>
 
