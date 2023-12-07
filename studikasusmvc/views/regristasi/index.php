@@ -67,9 +67,9 @@ foreach($regristasi as $x){
         <td><?php echo $x['password'] ?></td>
         <td><?php echo $x['level'] ?></td>
         <td>
-            <a href="editRegristasi?id=<?php echo $x['id'];?>"class="btn btn-warning">Edit</a>
+            <a href="editRegristasi?id=<?php echo $x['id'];?>"class="btn btn-outline-warning">Edit</a>
             <a href="hapusRegristasi?id=<?php echo $x['id'];?>" onclick = "return confirm 
-            ('Apakah yakin akan menghapus..?')"class="btn btn-danger">Hapus</a>
+            ('Apakah yakin akan menghapus..?')"class="btn btn-outline-danger">Hapus</a>
         </td>
     </tr>
     <?php

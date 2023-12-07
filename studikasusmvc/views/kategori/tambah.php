@@ -18,7 +18,11 @@ require '../../index.php';
   </div>
   <div class="mb-3">
     <label for="harga_barang" class="form-label">Harga Barang</label>
-    <input type="text" class="form-control" name="harga_barang" >
+    <input type="number" class="form-control" name="harga_barang" >
+  </div>
+  <div class="mb-3">
+    <label for="foto" class="form-label">Foto Barang</label>
+    <input type="file" class="form-control" name="foto" >
   </div>
         <tr>
         <tr>

@@ -43,6 +43,7 @@ $kategori = $kategoriController->getAllKategori();
             <th>No</th>
             <th>Nama barang</th>
             <th>Harga barang</th>
+            <th>Foto</th>
             <th>Aksi</th>
           </tr>
           <?php
@@ -54,8 +55,11 @@ $kategori = $kategoriController->getAllKategori();
               <td><?php echo $x['nama_barang'] ?></td>
               <td><?php echo $x['harga_barang'] ?></td>
               <td>
-                <a href="editKategori?id_kategori=<?php echo $x['id_kategori']; ?>" class="btn btn-warning">Edit</a>
-                <a href="hapusKategori?id_kategori=<?php echo $x['id_kategori']; ?>" onclick="return confirm('Apakah yakin akan menghapus..?')" class="btn btn-danger">Hapus</a>
+                <img src="foto-kategori/<?php echo $x['foto']; ?>" alt="Foto Barang" width="100">
+              </td>
+              <td>
+                <a href="editKategori?id_kategori=<?php echo $x['id_kategori']; ?>" class="btn btn-outline-warning">Edit</a>
+                <a href="hapusKategori?id_kategori=<?php echo $x['id_kategori']; ?>" onclick="return confirm('Apakah yakin akan menghapus..?')" class="btn btn-outline-danger">Hapus</a>
               </td>
             </tr>
           <?php

@@ -14,9 +14,9 @@ class Kategori {
         return $result;
     }
 
-    public function createKategori($nama_barang,$harga_barang){
-       $query="INSERT INTO kategori(nama_barang,harga_barang)
-       VALUES('$nama_barang','$harga_barang')";
+    public function createKategori($nama_barang,$harga_barang,$foto){
+       $query="INSERT INTO kategori(nama_barang,harga_barang,foto)
+       VALUES('$nama_barang','$harga_barang','$foto')";
        $result=mysqli_query($this->koneksi,$query);
        if($result){
         return true;
@@ -31,8 +31,8 @@ class Kategori {
         return mysqli_fetch_assoc($result);
     }
 
-    public function updateKategori($id_kategori,$nama_barang,$harga_barang){
-        $query="UPDATE kategori set nama_barang='$nama_barang',harga_barang='$harga_barang' where id_kategori='$id_kategori'";  
+    public function updateKategori($id_kategori,$nama_barang,$harga_barang,$foto){
+        $query="UPDATE kategori set nama_barang='$nama_barang',harga_barang='$harga_barang', foto='$foto' where id_kategori='$id_kategori'";  
         $result = mysqli_query($this->koneksi, $query);
         if ($result){
             return true;
